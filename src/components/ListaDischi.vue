@@ -1,10 +1,19 @@
 <template>
-  <div></div>
+  <div class="container">
+    <div class="row row-cols-5 justify-content-evenly">
+      <Disco
+        v-for="(disco, index) in arrayDischi"
+        :key="index"
+        :info="disco"
+        class="col m-3"
+      />
+    </div>
+  </div>
 </template>
 
 <script>
 import axios from "axios";
-import Personaggio from "../commons/Disco.vue";
+import Disco from "./Disco.vue";
 
 export default {
   name: "ListaDischi",
@@ -25,7 +34,7 @@ export default {
       axios
         .get(this.apiUrl)
         .then((risposta) => {
-          this.arrayDischi = risposta.data;
+          this.arrayDischi = risposta.data.response;
         })
         .catch(function (error) {
           console.log(error);
@@ -35,5 +44,6 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+
 </style>
