@@ -7,6 +7,8 @@
 <script>
 export default {
     name: "Header",
+    components: {
+    }
     
 }
 </script>
@@ -16,7 +18,7 @@ export default {
 
 .header-container{
     padding: 10px;
-    height: 5vh;
+    height: 50px;
     background-color: $bg-color-1;
 }
 

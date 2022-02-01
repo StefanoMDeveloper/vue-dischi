@@ -1,10 +1,12 @@
 <template>
-  <div class="disco">
-    <img :src="info.poster" :alt="info.title" />
-    <h5>{{ info.title }}</h5>
-    <div class="testo">
-      <p>{{ info.author }}</p>
-      <p class="anno">{{ info.year }}</p>
+  <div>
+    <div class="disco">
+      <img :src="info.poster" :alt="info.title" />
+      <h5>{{ info.title }}</h5>
+      <div class="testo">
+        <p>{{ info.author }}</p>
+        <p class="anno">{{ info.year }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -26,13 +28,11 @@ h5 {
   margin: 20px 0;
 }
 
-.testo{
-
-    p {
+.testo {
+  p {
     color: grey;
+  }
 }
-}
-
 
 .anno {
   font-size: 12px;
@@ -47,6 +47,7 @@ h5 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
   img {
     width: 90%;
   }
