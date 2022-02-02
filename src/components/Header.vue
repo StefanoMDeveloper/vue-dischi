@@ -1,6 +1,6 @@
 <template>
   <div class="header-container">
-      <i class="fa-brands fa-spotify"></i>
+      <img src="../assets/img/logo.svg" alt="">
   </div>
 </template>
 
@@ -20,6 +20,10 @@ export default {
     padding: 10px;
     height: 50px;
     background-color: $bg-color-1;
+
+    img{
+        height: 100%;
+    }
 }
 
 .fa-brands{
